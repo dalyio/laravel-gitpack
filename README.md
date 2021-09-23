@@ -1,5 +1,6 @@
 # Laravel Git Helper for Packages Development
-A package for Laravel to perform basic git commands on locally integrated development packages.
+
+A package for Laravel to perform basic git commands on locally integrated development packages.  If working within multiple local development packages or repositories at once this package is meant to ease the burden of navigating to each individual repository to perform basic git commands.
 
 ## Installation
 
@@ -17,11 +18,8 @@ Edit the new `git.php` configuration file in the config directory to match your 
 
 ```php
 return [
-    
-    'username' => '{GIT USERNAME}',
-    
-    'email' => '{GIT EMAIL}',
-    
+    'username' => '{DEFAULT GIT USERNAME}',
+    'email' => '{DEFAULT GIT EMAIL}',
     'message' => '{DEFAULT COMMIT MESSAGE}',
     
     'packages' => [
@@ -87,7 +85,7 @@ php artisan git:pull -p {VENDOR/REPOSITORY}
 Commit and push changes to all your configured local development packages.
 
 ``` bash
-php artisan git:push -m "your commit message here"
+php artisan git:push -m "{COMMIT MESSAGE}"
 ```
 
 Or specify a single package to commit and push to.
