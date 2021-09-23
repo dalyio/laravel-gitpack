@@ -16,6 +16,8 @@ php artisan vendor:publish --provider="Dalyio\Gitpack\Providers\GitpackServicePr
 Edit the new `git.php` configuration file in the config directory to match your git credentials and repositories.
 
 ```php
+return [
+    
     'username' => '{GIT USERNAME}',
     
     'email' => '{GIT EMAIL}',
@@ -23,9 +25,10 @@ Edit the new `git.php` configuration file in the config directory to match your 
     'message' => '{DEFAULT COMMIT MESSAGE}',
     
     'packages' => [
-        '{GIT VENDOR / REPOSITORY}' => '{PATH TO LOCAL DEVELOPMENT PACKAGE}',
+        '{VENDOR/REPOSITORY}' => '{PATH TO LOCAL DEVELOPMENT PACKAGE}',
         'dalyio/laravel-gitpack' => 'packages/dalyio/gitpack/',
     ],
+]
 ```
 
 ## Usage
@@ -35,13 +38,13 @@ Edit the new `git.php` configuration file in the config directory to match your 
 Initialize the git repository using the default information provided in the `git.php` configuration file.
 
 ``` bash
-php artisan git:init -p dalyio/laravel-gitpack
+php artisan git:init -p {VENDOR/REPOSITORY}
 ```
 
 Or provide new credentials.
 
 ``` bash
-php artisan git:init -p dalyio/laravel-gitpack -u dalyio -e dalyio.mail@gmail.com 
+php artisan git:init -p {VENDOR/REPOSITORY} -u {GIT USERNAME} -e {GIT EMAIL}
 ```
 
 ### Status
@@ -76,7 +79,7 @@ php artisan git:pull
 Or specify a single package to pull from.
 
 ``` bash
-php artisan git:pull -p dalyio/laravel-gitpack
+php artisan git:pull -p {VENDOR/REPOSITORY}
 ```
 
 ### Push
@@ -90,7 +93,7 @@ php artisan git:push -m "your commit message here"
 Or specify a single package to commit and push to.
 
 ``` bash
-php artisan git:push -p dalyio/laravel-gitpack -m "your commit message here"
+php artisan git:push -p {VENDOR/REPOSITORY} -m "{COMMIT MESSAGE}"
 ```
 
 ## Errors
