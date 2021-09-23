@@ -96,7 +96,7 @@ php artisan git:push -p {VENDOR/REPOSITORY} -m "{COMMIT MESSAGE}"
 
 ## Branches
 
-When performing any of the above commands, Laravel Gitpack will detect the local development package's current branch and perform the operation using the current branch.  To change branches or to perform more complex git branch operations, it is recommended that you navigate to the source of your local development package and use native git commands to resolve any issues.
+When performing any of the above commands, Laravel Gitpack will detect the local development package's current branch and perform the operation using that current branch.  To change branches or to perform more complex git branch operations, it is recommended that you navigate to the source of your local development package and use native git commands to resolve any issues.
 
 ## Errors
 
