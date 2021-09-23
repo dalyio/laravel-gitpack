@@ -32,13 +32,13 @@ Edit the new `git.php` configuration file in the config directory to match your 
 
 ### Initialize
 
-Initialize the git repository using the default information provided in the `git.php` configuration files.
+Initialize the git repository using the default information provided in the `git.php` configuration file.
 
 ``` bash
 php artisan git:init -p dalyio/laravel-gitpack
 ```
 
-Or provide new credentials
+Or provide new credentials.
 
 ``` bash
 php artisan git:init -p dalyio/laravel-gitpack -u dalyio -e dalyio.mail@gmail.com 
@@ -92,6 +92,10 @@ Or specify a single package to commit and push to.
 ``` bash
 php artisan git:push -p dalyio/laravel-gitpack -m "your commit message here"
 ```
+
+## Errors
+
+If a git error occurs during any of the above processes it is recommended that you navigate to the source of your local development package and use native git commands to resolve any issues.
 
 ## License
 
