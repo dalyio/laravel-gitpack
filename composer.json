@@ -26,8 +26,8 @@
             ]
         },
         "branch-alias": {
-            "main": "0.0.2-dev",
-            "master": "0.0.2-dev"
+            "main": "0.0.4-dev",
+            "master": "0.0.4-dev"
         }
     },
     "config": {
