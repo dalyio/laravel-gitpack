@@ -13,7 +13,7 @@ class GitpackServiceProvider extends ServiceProvider
     {
         $this->publishes([
             realpath(__DIR__.'/../../config/git.php') => config_path('git.php'),
-        ], 'initialize');
+        ]);
     }
 
     /**
